@@ -11,5 +11,6 @@ CMD sloxy
 from alpine:latest
 
 COPY --from=build /sloxy /bin/sloxy
+ADD entrypoint.sh /bin/entrypoint.sh
 
-ENTRYPOINT /bin/sloxy
+CMD /bin/entrypoint.sh
